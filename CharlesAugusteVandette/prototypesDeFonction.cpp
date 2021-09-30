@@ -9,6 +9,8 @@ int calculerMoyenne(int val1)
 
 	for (int i = 1; i <= val1; i++)
 	{
+		cout << "Veuillez enter la note : " << i << endl;
+		cout << "==> ";
 		cin >> note;
 		resultat = resultat + note;
 	}
@@ -16,4 +18,14 @@ int calculerMoyenne(int val1)
 	resultat = resultat / val1;
 
    return resultat;
+}
+
+bool validerDate(int jour, int mois, int annee)
+{
+	bool validation = true;
+	if (!(jour > 0 && jour < 32 && mois > 0 && mois < 13))
+	{
+		validation = false;
+	}
+	return validation;
 }
